@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Arrow from "./Arrow";
+import Numbers from "./Numbers";
 
 function App() {
+  const [counter, setCounter] = useState([1, 2, 3, 4, 5]);
+
+  const increment = () => {
+    if (counter[4] < 20) {
+      const newNumbers = counter.map((position) => (position += 1));
+      setCounter(newNumbers);
+    }
+  };
+
+  const decrement = () => {
+    if (counter[0] > 0) {
+      const newNumbers = counter.map((position) => (position -= 1));
+      setCounter(newNumbers);
+    }
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Arrow text="<<" actionOnClick={decrement} />
+      {counter.map((square, i) => (
+        <Numbers key={i} text={square} />
+      ))}
+      <Arrow text=">>" actionOnClick={increment} />
+    </>
   );
 }
 

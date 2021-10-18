@@ -1,0 +1,21 @@
+#root {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+#root div {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  border: 1px solid gray;
+}
+
+#root div:last-child:hover,
+#root div:first-child:hover {
+  cursor: pointer;
+  color: blue;
+}

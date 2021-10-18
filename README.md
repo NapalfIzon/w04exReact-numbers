@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Ejercicio - React Katas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## #1. Círculos
 
-## Available Scripts
+Crear varios círculos en pantalla, cuando se clica sobre ellos deben cambiar de color.
 
-In the project directory, you can run:
+Guía:
 
-### `npm start`
+- crear el círculo como un componente (Circle)
+- utilizar useState para establecer un estado seleccionado (`true` / `false`)
+- utilizar el evento `onClick` del círculo para ejecutar la función que modifica el state
+- condicionar el estilo del círculo al valor del state
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![circles](circles.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## #2. Input numérico
 
-### `npm test`
+Crear dos botones y un campo `<input>` como en la figura.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+El valor inicial del campo `<input>` deberá ser 0.
 
-### `npm run build`
+Al clicar sobre el boton “+” debe sumar una unidad.
+Al clicar sobre el boton “-” debe restar una unidad.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Limitar los valores posibles a números enteros de 0 a 10.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Nota: el campo `<input>` no debe ser editable directamente por el usuario
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![input](input.png)
 
-### `npm run eject`
+## #3. Thumbs up/down
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Utilizando la librería Font Awesome, mostrar un icono que cambie de `icon1` a `icon2` al pulsar con el ratón.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```jsx
+<FlipIcon icon1="fa-thumbs-up" icon2="fa-thumbs-down" />
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## #4. Números
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Debemos crear un elemento como el siguiente:
 
-## Learn More
+![numeros1](numeros1.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Deberán añadirse las clases y la funcionalidad necesarias para que cuando cliquemos sobre `<<` reste una unidad a todos los números, y cuando cliquemos en `>>` sume una unidad:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![numeros2](numeros2.png)
 
-### Code Splitting
+Sólo debe permitir moverse entre 0 y 20.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Al hacer clic sobre un número, el número debe aparecer en grande en algún punto de la pantalla.
